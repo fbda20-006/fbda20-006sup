@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack | Environmental Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-leaf"></i> EcoTrack
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#stats">Statistics</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#contact">Join Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Track. Reduce. Protect.</h1>
+                <p>Monitor your environmental impact and learn sustainable practices</p>
+                <a href="#quiz" class="btn">Take the Eco Quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <h2>Global Environmental Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Carbon Emissions</h3>
+                    <p class="stat-number" data-target="36.8">0</p>
+                    <p>Billion tons per year</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Plastic Waste</h3>
+                    <p class="stat-number" data-target="380">0</p>
+                    <p>Million tons annually</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Forest Loss</h3>
+                    <p class="stat-number" data-target="10">0</p>
+                    <p>Million hectares/year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <h2>Sustainable Solutions</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="energy">Energy</button>
+                <button class="tab-btn" data-tab="waste">Waste</button>
+                <button class="tab-btn" data-tab="water">Water</button>
+            </div>
+            <div class="tab-content active" id="energy">
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d" alt="Solar Panels">
+                    <h3>Switch to Renewable Energy</h3>
+                    <p>Solar and wind power can reduce carbon emissions by up to 80%.</p>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1605066975391-6e9aab5bcec2" alt="LED Bulb">
+                    <h3>Use Energy-Efficient Appliances</h3>
+                    <p>LED lights consume 75% less energy than traditional bulbs.</p>
+                </div>
+            </div>
+            <div class="tab-content" id="waste">
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4" alt="Recycling">
+                    <h3>Recycle Properly</h3>
+                    <p>Recycling one aluminum can saves enough energy to run a TV for 3 hours.</p>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c1936" alt="Compost">
+                    <h3>Compost Organic Waste</h3>
+                    <p>30% of household waste can be composted to enrich soil.</p>
+                </div>
+            </div>
+            <div class="tab-content" id="water">
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1551224402-36b5b5c06d6b" alt="Low-flow shower">
+                    <h3>Install Low-Flow Fixtures</h3>
+                    <p>Saves up to 60% of water usage in households.</p>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35" alt="Rainwater harvesting">
+                    <h3>Rainwater Harvesting</h3>
+                    <p>Collects and stores rainwater for non-potable uses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco Quiz -->
+    <section class="quiz" id="quiz">
+        <div class="container">
+            <h2>How Eco-Friendly Are You?</h2>
+            <div class="quiz-container">
+                <div id="quiz-question">
+                    <h3 id="question-text">Do you use reusable bags when shopping?</h3>
+                    <div class="quiz-options">
+                        <button class="option-btn" data-score="2">Always</button>
+                        <button class="option-btn" data-score="1">Sometimes</button>
+                        <button class="option-btn" data-score="0">Never</button>
+                    </div>
+                </div>
+                <div id="quiz-result" class="hidden">
+                    <h3>Your Eco Score: <span id="score">0</span>/10</h3>
+                    <p id="result-message"></p>
+                    <button id="retake-btn">Retake Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Join Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <select id="interest">
+                        <option value="">Select your interest</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="donor">Donor</option>
+                        <option value="educator">Educator</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Join Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoTrack</h3>
+                    <p>Helping you make sustainable choices for a greener planet.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 EcoTrack. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
